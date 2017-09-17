@@ -9,3 +9,14 @@ def insertionSort(tab):   #sorting by insertion
             i = i - 1
         tab[i + 1] = x
     return tab   #return sorted tab
+    
+def selectionSort(tab):   #sorting by selection
+    print(' - Selection sort')
+    print(tab, '-> before sorting')
+    for j in range(len(tab) - 1, -1, -1):
+        max_el = j
+        for i in range(j - 1, -1, -1):
+            if tab[i] > tab[max_el]:
+                max_el = i
+        tab[j], tab[max_el] = tab[max_el], tab[j]
+    return tab
